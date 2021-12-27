@@ -7,7 +7,8 @@ def upload(image_file):
     '''
     上传图片到sm.ms图床，返回data字典
     '''
-    headers = {'Authorization': 'COdRYuAu1MKqB8oYT6WTgxpmxDWyjelV'}
+    # 这里可以写sm.ms图床的用户秘钥，不写也可以，但是会追踪不到图片的位置
+    # headers = {'Authorization': '{sm.ms的图床秘钥}'}
     files = {'smfile': image_file}
     url = 'https://sm.ms/api/v2/upload'
 
