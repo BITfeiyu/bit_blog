@@ -87,38 +87,25 @@ WSGI_APPLICATION = 'drf_vue_blog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-# 默认使用本地的sqlite数据库
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-# 更换为我们需要的mysql数据库
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'bit_blog',
-#         'USER':'root',
-#         'PASSWORD':'rootmima',
-#         'HOST':'47.113.205.122',
-#         'PORT':'3306',
-#     }
-# }   
-
-# 换阿里云的数据库试试
+默认使用本地的sqlite数据库
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'bit_blog',
-        'USER':'root',
-        'PASSWORD':'Rootmima!',
-        'HOST':'rm-2zeqksc1jn09767iubo.mysql.rds.aliyuncs.com',
-        'PORT':'3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 } 
 
+# 如果换其他数据库，比如mysql可以改这里的参数
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': '{数据库名}',
+        'USER':'{数据库用户名}',
+        'PASSWORD':'{数据库的用户密码}',
+        'HOST':'{IP地址或者网址}',
+        'PORT':'3306',
+    }
+} 
 
 
 # Password validation
